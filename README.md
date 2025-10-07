@@ -7,3 +7,5 @@ Cada carpeta representa un flujo de trabajo dentro del programa. Ej: 01-Inicio d
 El nombre de cada script corresponde a la tarea en la que se encuentra el script dentro del flujo de trabajo
 
 Cada script deberá tener un comentario al inicio del mismo en el que se explica el objetivo general del mismo.
+
+Cabe recalcar que cualquier cambio que se haga en estos archivos deberá ser actualizado en el gestor documental y vice versa puesto que no existe una conexión entre ellos.
