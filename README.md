@@ -13,3 +13,5 @@ Cada script deberá tener un comentario al inicio del mismo en el que se explica
 de GS INIMA.
 
 Cabe recalcar que cualquier cambio que se haga en estos archivos deberá ser actualizado en el gestor documental y vice versa puesto que no existe una conexión entre ellos.
+
+En caso de que no aparezca una carpeta con el nombre de un flujo compruebue si tiene tareas con scripts y subalos en caso de que existan.
