@@ -13,6 +13,8 @@ var telefono = IndexData.GetField("Telefono");
 var personaContacto = IndexData.GetField("personaContacto");
 var paginaWeb = IndexData.GetField("paginaWeb");
 var correoElectornico = IndexData.GetField("correoElectronico");
+var nombreFirmante =  IndexData.GetField("nombreFirmante") || "";
+var cargoFirmante = IndexData.GetField("Cargo") || "";
 var nDocForm = IndexData.GetField("nDoc");
 //cargamos las variables que se van a usar para identificar el expediente
 var numExpediente = IndexData.GetField("numExpediente");
@@ -39,6 +41,7 @@ function getNumeroEmpleadosString(numero) {
 }
 
 var numeroEmpleadosTexto = getNumeroEmpleadosString(numeroEmpleadosID);
+//Comprobarmos si pagina web es vacia
 if(!paginaWeb){
     paginaWeb = "No tiene / No contesta";
 }
@@ -93,6 +96,18 @@ var requestBody = {
                 "StringIndexData": {
                     "FieldNo": 1822,
                     "DataValue": correoElectornico
+                }
+            },
+                        {
+                "StringIndexData":{
+                    "FieldNo":4402 ,
+                    "DataValue": nombreFirmante
+                }
+            },
+            {
+                "StringIndexData":{
+                    "FieldNo":4403,
+                    "DataValue": cargoFirmante
                 }
             }
         ]

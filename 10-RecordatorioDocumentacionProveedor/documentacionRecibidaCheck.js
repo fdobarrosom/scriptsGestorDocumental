@@ -60,7 +60,7 @@ try {
 } finally {
  // Cerrar la conexión y el Recordset
  if (myRecordSet) {
- //myRecordSet.Close();
+ myRecordSet.Close();
  }
  if (myConn) {
  myConn.Close();

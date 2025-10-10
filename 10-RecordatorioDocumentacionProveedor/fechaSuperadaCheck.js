@@ -2,7 +2,7 @@
 var resultado = 0;
 var idProveedor = SourceIndexData.GetField("idProveedor");
 //Carga de fecha de siguiente notificaicón
-var fechaNotificacion = SourceIndexData.GetField("Fecha_Recordatorio");
+var fechaNotificacion = SourceIndexData.GetField("Fecha_Recodatorio");
 var fechaSuperada = 0;
 
  function convertirFechas(fecha,offset){
@@ -29,12 +29,12 @@ fechaActualFormateada = convertirFechas(fechaActual,0);
 
 
 // Si no existe fecha de notificación previa se coloca como dentro de 5 dias
-if (!fechaNotificacion) {
+if (!fechaNotificacion && fechaNotificacion.trim() != "") {
     debug = '0'
     fechaNotificacion = convertirFechas(fechaActual,5);
 }
 
-if(fechaActualFormateada == fechaNotificacion){
+if(new Date(fechaActualFormateada) >= new Date(fechaNotificacion)){
 	debug = '1'
     fechaSuperada =  1;
     fechaNotificacion = convertirFechas(fechaActual,5); 
